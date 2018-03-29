@@ -16,7 +16,7 @@ var socketio = (server) => {
             if(idx > sample.length - 1){
                 if(pid != null) {clearInterval(pid);}
             }
-        },200);
+        },1000);
         socket.on('disconnect', function(){
             if(pid != null) {clearInterval(pid);}
             console.log('user disconnected');
