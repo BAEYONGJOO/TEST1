@@ -26,7 +26,7 @@ d = {
 ```js
 var item = components.createItem(d);
 d.id = item.id;
-data.[d.type.toLowerCase() + '_data'].push(d);
+data[d.type.toLowerCase() + '_data'].push(d);
 ```
 
 ### 매수, 매도 거래체결 프로세스
