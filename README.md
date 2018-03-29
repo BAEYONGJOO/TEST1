@@ -43,7 +43,7 @@ var d1 = this.data.s_data.filter(function(v){
 });
 ...
 // 가격 및 수량을 기준으로 정렬(낮은가격)
-d1.sort(function(a,b){ if(a.price==b.price) { return a.qty - b.qty; } else return a.price - b.price});
+d1.sort(function(a,b){ if(a.price == b.price) { return b.qty - a.qty; } else return a.price - b.price});
 // 거래가능한 매수데이터로 거래체결 처리
 ```
 * 매수 거래체결 처리 이벤트
@@ -54,7 +54,7 @@ var d1 = this.data.b_data.filter(function(v){
 });
 ...
 // 가격 및 수량을 기준으로 정렬(높은가격)
-d1.sort(function(a,b){ if(a.price==b.price) { return a.qty - b.qty; } else return b.price - a.price});
+d1.sort(function(a,b){ if(a.price == b.price) { return b.qty -  .qty; } else return b.price - a.price});
 // 거래가능한 매수데이터로 거래체결 처리
 ```
 
