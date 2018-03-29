@@ -1,0 +1,224 @@
+* {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+body {
+    font: 14px Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+header {
+    position: relative;
+    width: 100vw;
+    height: 6vh;
+    padding: 1.5vh 2.2156vw;
+    box-shadow:0px 0px 4px 1px rgba(0,0,0,0.16);
+    overflow: hidden;
+}
+header h1 {
+    font-size: 3vh;
+}
+main {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 94vh;
+    border: 1px solid #dedede;
+}
+main>div.monitor {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 74vh;
+}
+main>div.monitor>div {
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+main>div.monitor>div:first-child {
+    border-right: 1px solid #dedede;
+}
+main>div.monitor>div>div.data-header {
+    display: -webkit-flex;
+    display: flex;
+    height: 32px;
+    width: 100%;
+    padding-right: 15px;
+}
+main>div.monitor>div>div.data-header>span {
+    display:inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 6px 6px;
+}
+.data-header>span:first-child {
+    border-right: 1px solid #dedede;
+}
+main>div.monitor>div>div.data-header>span>p {
+    display:inline-block;
+    width:50%;
+}
+main>div.monitor>div>div.data-header>span>p:first-child {
+    border-right: 1px solid #e0e0e0;
+}
+main>div.monitor>div>div.data-list {
+    height: 100%;
+    border-top: 1px solid #dedede;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+div.data-list>ul {
+    list-style: none;
+}  
+main>div.monitor>div.call>div.data-list ul>li {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 28px;
+    overflow: hidden;
+    border-bottom: 1px solid #dedede;
+}
+main>div.monitor>div.call>div.data-list ul>li::before{
+    content:'';
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(68, 109, 223, 0.8);
+    transform: translate(0%,100%);
+    transition: transform 40ms linear; 
+}
+main>div.monitor>div.call>div.data-list ul.buy>li::before{
+    transform: translate(100%,100%);
+}
+main>div.monitor>div.call>div.data-list ul>li>span {
+    display: inline-block;
+    width: 50%;
+}
+main>div.monitor>div.call>div.data-list ul>li>span:first-child {
+    border-right: 1px solid #dedede;
+}
+main>div.monitor>div.call>div.data-list ul>li>span>p {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding: 4px 6px;
+    text-align: right;
+}
+main>div.monitor>div.call>div.data-list ul>li>span>p:first-child {
+    border-right: 1px solid #dedede;
+}
+main>div.monitor>div.call>div.data-list .remove::before {
+    background-color: rgba(223, 68, 68, 0.8);
+}
+main>div.monitor>div.call>div.data-list .update::before {
+    width: 50%;
+    transform: translate(0%,0%);
+    transition: transform 80ms linear; 
+}
+main>div.monitor>div.call>div.data-list>ul.buy .remove::before{
+    transform: translate(100%,0%);
+}
+main>div.monitor>div.trans>div.data-list ul>li {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+}
+main>div.monitor>div.trans>div.data-list ul>li>div>span:nth-child(1) {
+    display:inline-block;
+    width: 20%;
+    border-right: 1px solid #eee;
+    text-align: center;
+    padding: 4px 6px;
+}
+main>div.monitor>div.trans>div.data-list ul>li>div>span:nth-child(2) {
+    display:inline-block;
+    width: 80%;
+    padding: 4px 6px;
+}
+main>div.monitor>div.trans>div.data-list ul>li>div:nth-child(2) {
+    width: 100%;
+    padding: 6px 6px 6px 64px;
+    border-top:1px solid #eee;
+}
+div.label {
+    position: absolute;
+    top : 1.5vh;
+    right: 12vw;
+    display:-webkit-flex;
+    display:flex;
+    max-height: 20px;
+    height: 20px;
+    white-space : nowrap;
+}
+div.label>div.blue_label {
+    position: relative;
+    display:-webkit-flex;
+    display:flex;
+    width: 50%;
+    white-space : nowrap;
+    max-height: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-right:10px;
+}
+div.label>div.blue_label::before {
+    content: '';
+    display: block;
+    max-width: 20px;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(68, 109, 223, 0.8);
+}
+div.label>div.blue_label::after {
+    content: '거래체결';
+    display: inline-block;
+    padding: 0px 4px;
+    line-height: 20px;
+}
+div.label>div.red_label {
+    position: relative;
+    display:-webkit-flex;
+    display:flex;
+    width: 50%;
+    white-space : nowrap;
+    line-height: 20px;
+    max-height: 20px;
+    height: 20px;
+}
+div.label>div.red_label::before {
+    content: '';
+    display: block;
+    max-width: 20px;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(223, 68, 68, 0.8);
+}
+div.label>div.red_label::after {
+    content: '삭제';
+    display: inline-block;
+    padding: 0px 4px;
+    line-height: 20px;
+}
+div.chart{
+    width: 100%;
+    height: 20vh;
+    border-bottom: 1px solid #dedede;
+}
